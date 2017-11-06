@@ -1,17 +1,17 @@
 /* The first part defines four variables for 4 pins 
- * 
- */
- *///Motor A
+ * in setup these pins are set to output
+ * in loop the pins are set to HIGH and LOW to switch the motors ON and OFF
+ ------------------------------------------------------------------------------*/
+  
+//pin Variables for Motor A
 int motorPin1  = 12;  // Pin Conected to Ia1
 int motorPin2  = 13;  // Pin Conected to Ia2
 
-//Motor B
+//pin Variables for Motor B
 //int motorPin3  = 7;  // Pin Conected to Ib1
 //int motorPin4  = 8;  // Pin Conected to Ib2
 
-
 void setup(){
- 
     //Set pins as outputs
     pinMode(motorPin1, OUTPUT);
     pinMode(motorPin2, OUTPUT);
@@ -19,7 +19,6 @@ void setup(){
     //pinMode(motorPin3, OUTPUT);
     //pinMode(motorPin4, OUTPUT);
 }
-
 
 void loop(){
     //===========================================================================================
@@ -32,7 +31,7 @@ void loop(){
     digitalWrite(motorPin2, HIGH);
     delay(5000);
 
-    //Because the code is in loop it will constantly repeat
+    //Because the code is in loop function the clockwise and anti-clockwise rotation will constantly repeat
     //For using the second motor use motorPin3 and motorPin4. Keep one HIGH and other LOW
 }
 
